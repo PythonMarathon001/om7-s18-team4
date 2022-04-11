@@ -1,0 +1,15 @@
+{% extends "base_order.html" %}
+
+{% block content %}
+
+<h2>Books filtered by name</h2>
+<p>part of name - <b>{{filter}}:</b></p>
+<ul>
+    {% for book_c in book_contains %}
+    <li>
+        <i>Book: </i>{{ book_c.name }} <i>Author: </i>{{ book_c.authors.name }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

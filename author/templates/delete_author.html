@@ -1,0 +1,15 @@
+<h2> Here you can delete author </h2>
+
+
+<form method="post">
+
+    {% csrf_token %}
+<select name="q" aria-label="Search">
+{% for author in authors %}
+    <option>{{ author.name }}</option>
+    {% endfor %}
+</select>
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">delete author</button>
+
+    </form>
+

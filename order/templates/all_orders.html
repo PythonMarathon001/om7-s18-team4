@@ -1,0 +1,12 @@
+{% extends "base_order.html" %}
+
+{% block content %}
+  <h2>All orders by date:</h2>
+  <p>All orders by date - {{all_orders.count}}:</p>
+  <ul>
+    {% for order in all_orders %}
+        <li><b>Date: </b>{{ order.created_at }} 
+          <p><i>Order details: </i>{{order}}</p></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

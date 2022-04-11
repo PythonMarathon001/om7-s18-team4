@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Books in library</title>
+</head>
+<body>
+    <h1>This is information about all books in library</h1>
+   {% for book in books%}
+
+     <h3>Name: {{book.name}}</h3>
+ <h3>Description: {{book.description}}</h3>
+ <h3>Count: {{book.count}}</h3>
+    <h4>_______</h4>
+
+
+
+
+
+
+
+   {% endfor %}
+ <a href="/book/"> Back to main </a>
+</body>
+</html>

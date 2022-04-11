@@ -1,0 +1,17 @@
+
+
+{% block content %}
+<h3> You can add a new author here:</h3>
+<form method="post">
+    {% csrf_token %}
+{{form}}
+<!--    <input type="text" placeholder="Authors name"><br>-->
+<!--    <input type="text" placeholder="Authors surname"><br>-->
+<!--    <input type="text" placeholder="Authors patronymic"><br>-->
+    <br>
+    <br>
+    <button type="submit"> Submit author</button>
+<span>{{ error }}</span>
+</form>
+
+{% endblock %}

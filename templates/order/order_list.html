@@ -1,0 +1,12 @@
+{% extends "base_order.html" %}
+
+{% block content %}
+  <h2>All orders (ListView)</h2>
+  <p>All orders - {{ order_list.count }}:</p>
+  <ul>
+    {% for order in order_list %}
+    <li>{{order}}</li>
+    {% endfor %}
+  </ul>
+  
+{% endblock %}

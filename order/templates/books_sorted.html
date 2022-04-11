@@ -1,0 +1,35 @@
+{% extends "base_order.html" %}
+
+{% block content %}
+  <h2>All books sorted</h2>
+
+  <p><strong>All books sorted by name</strong></p>
+  <p><i>asc:</i></p>
+  <ul>
+    {% for book_asc in books_asc %}
+    <li>
+        <i>Book: </i>{{ book_asc.name }} <i>Author: </i>{{ book_asc.authors.name }} <i>Count: </i>{{ book_asc.count }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  
+  <p><i>desc:</i></p>
+  <ul>
+    {% for book_desc in books_desc %}
+    <li>
+        <i>Book: </i>{{ book_desc.name }} <i>Author: </i>{{ book_desc.authors.name }} <i>Count: </i>{{ book_desc.count }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+  
+  <p><strong>All books sorted by count:</strong></p>
+  <ul>
+    {% for book_count in books_count %}
+    <li>
+        <p><i>Book: </i>{{ book_count.name }} <i>Author: </i>{{ book_count.authors.name }} <i>Count: </i>{{ book_count.count }}</p> 
+    </li>
+    {% endfor %}
+  </ul>
+  
+ 
+{% endblock %}

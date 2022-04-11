@@ -1,0 +1,15 @@
+{% extends "base_order.html" %}
+
+{% block content %}
+<h2>Users list</h2>
+<p>who don't hand over books on time - {{black_list_count}}, details:</p>
+<ul>
+    {% for black_user in black_list %}
+    <li><b>User:</b> {{ black_user.user.first_name }} {{ black_user.user.last_name }}
+        <p><i>Plated end at:</i> {{ black_user.plated_end_at }} <i>Actual end at: </i>{{ black_user.end_at }}
+        <i>Book: </i>{{ black_user.book.name }} <i>Author: </i>{{ black_user.author.name }}</p>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

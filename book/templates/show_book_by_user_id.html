@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show book by user id</title>
+</head>
+<body>
+ <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" name="q" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search for user id</button>
+      </form>
+{{myFilter.form}}
+
+
+
+{% for book in books %}
+<h4>Book name: {{ book.name }}</h4>
+{% endfor %}
+<a href="/book/"> Back to books main page</a>
+</body>
+</html>

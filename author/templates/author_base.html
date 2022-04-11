@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Author</title>
+</head>
+<body>
+<h2>This is authors main page</h2>
+<h3>
+<a href="add_author/" > Add new author</a><br>
+    <br>
+    <a href="delete_author/"> Delete author</a><br>
+    <br>
+    <a href="update_author/"> Update author</a>
+    </h3>
+
+{% block content%}
+<a href="{%url 'main' %}"> Back to main page </a>
+{% endblock%}
+</body>
+</html>

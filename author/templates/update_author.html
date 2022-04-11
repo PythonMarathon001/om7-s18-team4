@@ -1,0 +1,23 @@
+<h2> Here you can update author </h2>
+
+
+<form method="post" >
+    {% csrf_token %}
+
+
+<select name="q" aria-label="Search">
+{% for author in authors %}
+    <option>{{ author.name }}</option>
+    {% endfor %}
+</select><br>
+    <br>
+    <input class="form-control mr-sm-2" name="name" type="search" placeholder="name" aria-label="Search">
+     <input class="form-control mr-sm-2" name="surname" type="search" placeholder="surname" aria-label="Search">
+      <input class="form-control mr-sm-2" name="patronymic" type="search" placeholder="patronymic" aria-label="Search">
+
+<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Update author</button>
+
+
+</form>
+
+<a href="{%url 'base' %}">Back</a>

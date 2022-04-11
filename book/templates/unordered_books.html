@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unordered books</title>
+</head>
+<body>
+<h2>List of unordered books:</h2>
+
+
+{% for book in books %}
+<h3>Name: {{book.name}}</h3>
+<h3>Description: {{book.description}}</h3>
+<h2>______</h2>
+{% endfor %}
+<a href="/book/"> Back to books main page</a>
+</body>
+</html>
